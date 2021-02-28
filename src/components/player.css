@@ -1,0 +1,41 @@
+.player {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.player-indicator {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 8px 5px 5px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+}
+
+.player--disconnected {
+   animation-name: blink;
+   animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+}
+
+.player--disconnected > .player-name {
+  color: #a2a2a2;
+}
+
+.player--enabled > .player-indicator {
+  background-color: #5dcc5d;
+  border-color: #5dcc5d;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
